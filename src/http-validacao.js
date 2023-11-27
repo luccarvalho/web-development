@@ -16,6 +16,14 @@ async function checaStatus(listaURLs) {
   return arrayStatus;
 }
 
+function manejaErros(erro) {
+  if (erro.cause.code === "ENOTFOUND") {
+    return "link não encontrado";
+  } else {
+    return "ocorreu algum erro";
+  }
+}
+
 export default async function listaValidada(listaDeLinks) {
   const links = extraiLinks(listaDeLinks);
   const status = await checaStatus(links);
