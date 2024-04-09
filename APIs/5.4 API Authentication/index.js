@@ -62,6 +62,21 @@ app.get("/apiKey", async (req, res) => {
   }
 });
 
+const config = {
+  headers: { Authorization: `Bearer ${yourBearerToken}` },
+};
+
+app.get("/bearerToken", async (req, res) => {
+  //TODO 5: Write your code here to hit up the /secrets/{id} endpoint
+  //and get the secret with id of 42
+  try {
+    const result = await axios.get(API_URL + "/secrets/2", config);
+    res.render("index.ejs", { content: JSON.stringify(result.data) });
+  } catch (error) {
+    res.status(404).send("Error:", error.message);
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
