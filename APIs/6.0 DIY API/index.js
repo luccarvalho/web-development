@@ -13,6 +13,13 @@ app.get("/random", (req, res) => {
   res.json(jokes[randomIndex]);
 });
 
+//2. GET a specific joke
+app.get("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const foundJoke = jokes.find((joke) => joke.id === id);
+  res.json(foundJoke);
+});
+
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
