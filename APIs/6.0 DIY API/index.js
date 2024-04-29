@@ -20,6 +20,13 @@ app.get("/jokes/:id", (req, res) => {
   res.json(foundJoke);
 });
 
+//3. GET a jokes by filtering on the joke type
+app.get("/filter", (req, res) => {
+  const type = req.query.type;
+  const filteredActivities = jokes.filter((joke) => joke.jokeType === type);
+  res.json(filteredActivities);
+});
+
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
