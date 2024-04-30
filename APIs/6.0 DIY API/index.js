@@ -27,6 +27,19 @@ app.get("/filter", (req, res) => {
   res.json(filteredActivities);
 });
 
+//4. POST a new joke
+app.post("/jokes", (req, res) => {
+  const newJoke = {
+    id: jokes.length + 1,
+    jokeText: req.body.text,
+    jokeType: req.body.type,
+  };
+
+  jokes.push(newJoke);
+  console.log(jokes.slice(-1));
+  res.json(newJoke);
+});
+
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
