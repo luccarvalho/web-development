@@ -40,6 +40,21 @@ app.post("/jokes", (req, res) => {
   res.json(newJoke);
 });
 
+//5. PUT a joke
+app.put("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const replacementJoke = {
+    id: id,
+    jokeText: req.body.text,
+    jokeType: req.body.type,
+  };
+
+  const searchIndex = jokes.findIndex((joke) => joke.id === id);
+
+  jokes[searchIndex] = replacementJoke;
+  res.json(replacementJoke);
+});
+
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
