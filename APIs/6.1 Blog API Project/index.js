@@ -32,6 +32,18 @@ let posts = [
   },
 ];
 
+let lastId = 3;
+
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//CHALLENGE 1: GET All posts
+app.get("/posts", (req, res) => {
+  console.log(posts);
+  res.json(posts);
+});
+
 app.listen(port, () => {
   console.log(`API is running at http://localhost:${port}`);
 });
