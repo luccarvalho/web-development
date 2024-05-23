@@ -8,4 +8,5 @@
 
 - `JavaScript`
 - `Node.js`
+- `JQuery`
 - `APIs`
