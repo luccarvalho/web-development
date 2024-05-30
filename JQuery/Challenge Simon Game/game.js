@@ -15,3 +15,12 @@ $("body").keypress(function (event) {
     started = true;
   }
 });
+
+$(".btn").click(function () {
+  let userChosenColour = $(this).attr("id");
+  userClickedPattern.push(userChosenColour);
+
+  playSound(userChosenColour);
+  animatePress(userChosenColour);
+  checkAnswer(userClickedPattern.length - 1);
+});
