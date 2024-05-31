@@ -24,3 +24,26 @@ $(".btn").click(function () {
   animatePress(userChosenColour);
   checkAnswer(userClickedPattern.length - 1);
 });
+
+function checkAnswer(currentLevel) {
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    console.log("sucess");
+
+    if (userClickedPattern.length === gamePattern.length) {
+      setTimeout(function () {
+        nextSequence();
+      }, 1000);
+    }
+  } else {
+    playSound("wrong");
+
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
+
+    $("#level-title").text("Game Over, Press A Key to Restart");
+
+    startOver();
+  }
+}
