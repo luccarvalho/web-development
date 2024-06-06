@@ -80,3 +80,9 @@ function animatePress(currentColor) {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
 }
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
+}
