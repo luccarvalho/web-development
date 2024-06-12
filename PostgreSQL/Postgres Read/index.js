@@ -13,6 +13,19 @@ const db = new pg.Client({
   port: 5432,
 });
 
+db.connect();
+
+let quiz = [];
+db.query("SELECT * FROM flags", (err, res) => {
+  if (err) {
+    console.error("Error executing query", err.stack);
+  } else {
+    quiz = res.rows;
+  }
+
+  db.end();
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
