@@ -26,6 +26,14 @@ db.query("SELECT * FROM flags", (err, res) => {
   db.end();
 });
 
+let totalCorrect = 0;
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+let currentQuestion = {};
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
