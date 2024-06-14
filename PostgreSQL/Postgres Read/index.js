@@ -34,6 +34,14 @@ app.use(express.static("public"));
 
 let currentQuestion = {};
 
+// GET home page
+app.get("/", (req, res) => {
+  totalCorrect = 0;
+  nextQuestion();
+  console.log(currentQuestion);
+  res.render("index.ejs", { question: currentQuestion });
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
