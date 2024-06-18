@@ -60,6 +60,11 @@ app.post("/submit", (req, res) => {
   });
 });
 
+function nextQuestion() {
+  const randomCountry = quiz[Math.floor(Math.random() * quiz.length)];
+  currentQuestion = randomCountry;
+}
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
