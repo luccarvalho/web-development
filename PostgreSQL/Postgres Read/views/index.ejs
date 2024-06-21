@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flag Quiz</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+
+  <body id="app">
+    <form class="container" action="/submit" method="post">
+      <div class="horizontal-container">
+        <h3>
+          Total Score:
+          <span id="score"> <%= locals.totalScore ? totalScore : "0" %> </span>
+        </h3>
+      </div>
+    </form>
+  </body>
+</html>
