@@ -15,6 +15,18 @@
           <span id="score"> <%= locals.totalScore ? totalScore : "0" %> </span>
         </h3>
       </div>
+
+      <h1 id="countryFlag"><%=question.flag %></h1>
+      <div class="answer-container">
+        <input
+          type="text"
+          name="answer"
+          id="userInput"
+          placeholder="Name the country"
+          autofocus
+          autocomplete="off"
+        />
+      </div>
     </form>
   </body>
 </html>
