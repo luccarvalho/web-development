@@ -27,6 +27,13 @@
           autocomplete="off"
         />
       </div>
+      <button type="submit">
+        SUBMIT<% if(locals.wasCorrect){ %>
+        <span class="checkmark">✔</span>
+        <% } else if (locals.wasCorrect===false) { %>
+        <span class="cross" id="error">✖</span>
+        <% } %>
+      </button>
     </form>
   </body>
 </html>
