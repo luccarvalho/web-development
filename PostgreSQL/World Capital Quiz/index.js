@@ -9,7 +9,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "world",
-  password: "86567978",
+  password: "",
   port: 5432,
 });
 
@@ -20,6 +20,18 @@ let quiz = [
   { country: "United Kingdom", capital: "London" },
   { country: "United States of America", capital: "New York" },
 ];
+
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.error("Error executing query", err.stack);
+  } else {
+    quiz = res.rows;
+  }
+
+  db.end();
+});
+
+let totalCorrect = 0;
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
