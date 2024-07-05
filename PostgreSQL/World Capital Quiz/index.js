@@ -33,6 +33,20 @@ db.query("SELECT * FROM capitals", (err, res) => {
 
 let totalCorrect = 0;
 
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+let currentQuestion = {};
+
+// GET home page
+app.get("/", async (req, res) => {
+  totalCorrect = 0;
+  await nextQuestion();
+  console.log(currentQuestion);
+  res.render("index.ejs", { question: currentQuestion });
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
