@@ -26,3 +26,25 @@ p {
   color: #4ecca3;
   font-family: "Indie Flower", cursive;
 }
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  border: none;
+  background-color: #4ecca3;
+  color: #eeeeee;
+  font-family: "Indie Flower", cursive;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 2%;
+  color: #eeeeee;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+}
