@@ -26,3 +26,5 @@ function rollTheDice() {
     "#img_player"
   )[1].innerHTML = `<img src=${images[player2]}>`;
 }
+
+rollTheDice();
