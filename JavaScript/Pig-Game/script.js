@@ -56,3 +56,32 @@ btnRoll.addEventListener('click', function () {
     }
   }
 });
+
+btnHold.addEventListener('click', function () {
+  if (playing) {
+    // 1° Adiciona a pontuação atual a pontuação do jogador ativo
+    scores[activePlayer] += currentScore;
+    document.querySelector(`#score--${activePlayer}`).textContent =
+      scores[activePlayer];
+
+    // 2° Verifica se a pontuação geral é >= a 100
+    if (scores[activePlayer] >= 100) {
+      // Se for >= 100, então finaliza o jogo
+      playing = false;
+      diceEl.classList.add('hidden');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+    } else {
+      // Se não for, então troca para o outro jogador
+      switchPlayer();
+    }
+  }
+});
+
+btnNew.addEventListener('click', function () {
+  location.reload();
+});
