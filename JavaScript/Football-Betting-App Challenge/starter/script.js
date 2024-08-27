@@ -76,3 +76,6 @@ const game = {
     team2: 6.5,
   },
 };
+
+// 1. Desestruturando o array original e divindo os valores nas variáveis players1 e players2
+const [players1, players2] = game.players;
