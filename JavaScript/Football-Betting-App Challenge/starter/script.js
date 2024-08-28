@@ -79,3 +79,7 @@ const game = {
 
 // 1. Desestruturando o array original e divindo os valores nas variáveis players1 e players2
 const [players1, players2] = game.players;
+
+// 2. Desestruturando o array players1 e colocando o primeiro valor na variável gk
+// 2.1. Colocando o restante dos valores na variável fieldPlayers, usando a sintaxe Rest
+const [gk, ...fieldPlayers] = players1;
