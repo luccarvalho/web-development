@@ -83,3 +83,6 @@ const [players1, players2] = game.players;
 // 2. Desestruturando o array players1 e colocando o primeiro valor na variável gk
 // 2.1. Colocando o restante dos valores na variável fieldPlayers, usando a sintaxe Rest
 const [gk, ...fieldPlayers] = players1;
+
+// 3. Criando um array com todos os jogadores de ambas as equipes, utilizando Spread Operator
+const allPlayers = [...players1, ...players2];
