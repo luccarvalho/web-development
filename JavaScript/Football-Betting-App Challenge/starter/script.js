@@ -122,3 +122,6 @@ const [gk, ...fieldPlayers] = players1;
 
 // 3. Criando um array com todos os jogadores de ambas as equipes, utilizando Spread Operator
 const allPlayers = [...players1, ...players2];
+
+// 4. Criando um novo array com todos os jogadores do players1 e adicionando mais 3 jogadores
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
