@@ -126,3 +126,9 @@ const allPlayers = [...players1, ...players2];
 
 // 4. Criando um novo array com todos os jogadores do players1 e adicionando mais 3 jogadores
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
+
+// 5. Criando 3 variáveis com base no objeto odds dentro do objeto game
+// 5.1. Usando Destructuring Objects e trocando o nome da varável x por draw
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
