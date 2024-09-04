@@ -51,7 +51,7 @@ Your tasks:
 1. Loop over the game.scored array and print each player name to the console,
 along with the goal number (Example: "Goal 1: Lewandowski")
 
-2. Use a loop to calculate the average odd and log it to the console
+2. Use a loop to calculate the average odd and log it to the console.
 
 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
 Odd of victory Bayern Munich: 1.33
@@ -111,6 +111,8 @@ const game = {
     team2: 6.5,
   },
 };
+
+// Code Challenge #1
 
 // 1. Desestruturando o array original e divindo os valores nas variáveis players1 e players2
 const [players1, players2] = game.players;
