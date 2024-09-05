@@ -132,3 +132,9 @@ const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
 const {
   odds: { team1, x: draw, team2 },
 } = game;
+
+// 6. Criando uma função que recebe como parâmetro um valor arbitrário, usando Rest Parameters
+// 6.1. Rest Parameters basicamente agrega todos os argumentos recebidos em um array
+const printGoals = function (...players) {
+  console.log(`${players.length} goals were scored.`);
+};
