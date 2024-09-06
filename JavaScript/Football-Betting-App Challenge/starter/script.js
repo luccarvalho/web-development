@@ -138,3 +138,6 @@ const {
 const printGoals = function (...players) {
   console.log(`${players.length} goals were scored.`);
 };
+
+// 6.2. Usando Spread Operator como argumento da chamada da função
+printGoals(...game.scored);
