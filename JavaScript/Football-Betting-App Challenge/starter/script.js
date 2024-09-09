@@ -141,3 +141,8 @@ const printGoals = function (...players) {
 
 // 6.2. Usando Spread Operator como argumento da chamada da função
 printGoals(...game.scored);
+
+// 7. Mostrando a equipe com a cotação mais baixa e com maior probabilidade de vencer
+// 7.1. Fazendo isso sem utilizar instrução 'if' ou operador ternário (utilizando um operador lógico)
+team1 < team2 && console.log('Team 1 is more likely to win.');
+team1 > team2 && console.log('Team 2 is more likely to win.');
