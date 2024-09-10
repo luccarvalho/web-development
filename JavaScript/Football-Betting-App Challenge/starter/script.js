@@ -146,3 +146,5 @@ printGoals(...game.scored);
 // 7.1. Fazendo isso sem utilizar instrução 'if' ou operador ternário (utilizando um operador lógico)
 team1 < team2 && console.log('Team 1 is more likely to win.');
 team1 > team2 && console.log('Team 2 is more likely to win.');
+
+// Code Challenge #2
