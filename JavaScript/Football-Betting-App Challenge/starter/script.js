@@ -148,3 +148,8 @@ team1 < team2 && console.log('Team 1 is more likely to win.');
 team1 > team2 && console.log('Team 2 is more likely to win.');
 
 // Code Challenge #2
+
+// 8. Fazendo um loop no array game.scored, imprimindo no console o nome de cada um dos jogadores junto com o n° do gol
+// 8.1. Utilizando .entries() para acessar os índices do array
+for (const [i, el] of game.scored.entries())
+  console.log(`Goal ${i + 1}: ${el}`);
