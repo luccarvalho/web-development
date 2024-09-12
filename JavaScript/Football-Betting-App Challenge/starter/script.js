@@ -153,3 +153,5 @@ team1 > team2 && console.log('Team 2 is more likely to win.');
 // 8.1. Utilizando .entries() para acessar os índices do array
 for (const [i, el] of game.scored.entries())
   console.log(`Goal ${i + 1}: ${el}`);
+
+// 9. Calculando a média de game.odds, pegando somente os valores com Object.values() que gera um array
