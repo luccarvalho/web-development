@@ -155,3 +155,5 @@ for (const [i, el] of game.scored.entries())
   console.log(`Goal ${i + 1}: ${el}`);
 
 // 9. Calculando a média de game.odds, pegando somente os valores com Object.values() que gera um array
+let average = 0;
+const odds = Object.values(game.odds);
