@@ -159,3 +159,5 @@ let average = 0;
 const odds = Object.values(game.odds);
 
 for (const odd of odds) average += odd;
+
+average /= odds.length;
