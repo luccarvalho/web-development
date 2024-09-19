@@ -163,3 +163,6 @@ for (const odd of odds) average += odd;
 average /= odds.length;
 
 console.log(average);
+
+// 10. Imprimindo no console as 3 probabilidades (odds) de uma forma bem formatada
+// 10.1. Criando uma string (teamStr) com um operador ternário (if), alterando a chave 'x' para 'draw'
