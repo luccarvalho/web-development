@@ -166,3 +166,7 @@ console.log(average);
 
 // 10. Imprimindo no console as 3 probabilidades (odds) de uma forma bem formatada
 // 10.1. Criando uma string (teamStr) com um operador ternário (if), alterando a chave 'x' para 'draw'
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
