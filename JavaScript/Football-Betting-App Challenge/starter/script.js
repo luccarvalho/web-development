@@ -75,6 +75,12 @@ game, it will look like this:
 
 // Challenge #3
 
+/*
+This time, we have a map called 'gameEvents' (see below) with a log of the events
+that happened during the game. The values are the events themselves, and the keys are
+the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+*/
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
