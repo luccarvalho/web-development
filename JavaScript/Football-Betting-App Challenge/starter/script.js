@@ -83,7 +83,10 @@ the minutes in which each event happened (a football game has 90 minutes plus so
 Your tasks:
 
 1. Create an array 'events' of the different game events that happened (no
-duplicates)
+duplicates).
+
+2. After the game has finished, is was found that the yellow card from minute 64
+was unfair. So remove this event from the game events log.
 */
 
 const game = {
